@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avernaci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 21:41:48 by avernaci          #+#    #+#             */
-/*   Updated: 2024/11/15 11:45:37 by avernaci         ###   ########.fr       */
+/*   Created: 2024/11/15 12:27:08 by avernaci          #+#    #+#             */
+/*   Updated: 2024/11/15 12:39:58 by avernaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_numeric(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (!((str[i] > 47 && str[i] < 58)))
-			return (0);
+		if (!((str[i] > 96) && (str[i] < 123)))
+			if ((str[i] > 64) && (str[i] < 91))
+				str[i] = str[i] + 32;
 		i++;
 	}
-	return (1);
+	return (str);
 }

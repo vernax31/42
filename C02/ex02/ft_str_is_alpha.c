@@ -6,20 +6,20 @@
 /*   By: avernaci <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 21:03:43 by avernaci          #+#    #+#             */
-/*   Updated: 2024/11/14 21:40:25 by avernaci         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:39:48 by avernaci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_alpha(char *str)
 {
 	int	i;
-	
+
 	i = 0;
 	while (str[i] != '\0')
 	{
 		if (!((str[i] > 64 && str[i] < 91) || (str[i] > 96 && str[i] < 123)))
-			return 0;
+			return (0);
 		i++;
 	}
-	return 1;
+	return (1);
 }
